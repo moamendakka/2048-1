@@ -1,0 +1,43 @@
+var x = 250;
+var y = 250;
+var x1 = 50;
+var y1 = 50;
+
+
+function setup(){
+createCanvas(1920, 1080);
+}
+
+function draw(){
+fill(255, 0 , 0);
+ellipse(x, y, 40, 40);
+fill(255, 0 , 0);
+ellipse(x1, y1, 20, 20);
+
+if (x1==x && y1==y){
+  y+=30;
+  x+=30;
+  rect(x1, y1, 100, 100);
+}
+
+}
+
+function keyPressed (){
+  if (keyIsDown(DOWN_ARROW)){
+  y +=20;
+  }
+
+  if(keyIsDown(UP_ARROW)){
+  y -=20;
+  }
+
+  if (keyIsDown(RIGHT_ARROW)){
+  x +=20;
+  }
+
+  if(keyIsDown(LEFT_ARROW)){
+  x -=20;
+  }
+  clear();
+}
+//no idea , just trying new shit
